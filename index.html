@@ -13,6 +13,23 @@
   gtag('js', new Date());
   gtag('config', 'G-RZGB68CE09');
 </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '968987115742501');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=968987115742501&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;500;600;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -741,24 +758,10 @@ body::before{
   font-size:72px;color:var(--cream);line-height:1;
 }
 .pb-price sup{font-size:28px;vertical-align:super;color:var(--ember)}
-.pb-old-wrap{
-  display:flex;flex-direction:column;
-  align-items:flex-start;
-  justify-content:center;
-  gap:1px;
-}
-.pb-old-label{
-  font-size:9px;font-weight:500;
-  letter-spacing:0.15em;text-transform:uppercase;
-  color:rgba(242,235,217,0.3);
-  font-family:'Oswald',sans-serif;
-}
 .pb-old{
-  font-size:28px;color:rgba(242,235,217,0.3);
+  font-size:18px;color:rgba(242,235,217,0.25);
   text-decoration:line-through;
-  text-decoration-color:var(--fire);
-  text-decoration-thickness:2px;
-  font-family:'Bebas Neue',sans-serif;
+  font-family:'Oswald',sans-serif;
 }
 .pb-save{
   font-size:11px;font-weight:500;
@@ -777,34 +780,6 @@ body::before{
   color:rgba(242,235,217,0.7);
 }
 .pbi-check{color:var(--ember);font-size:12px}
-
-/* HERO BUY BUTTON */
-.hero-buy-btn{
-  display:block;width:100%;
-  padding:18px 24px;
-  background:linear-gradient(135deg,var(--fire) 0%,var(--ember) 100%);
-  color:var(--cream);
-  font-family:'Bebas Neue',sans-serif;
-  font-size:22px;letter-spacing:0.08em;
-  text-align:center;text-decoration:none;
-  cursor:pointer;
-  position:relative;overflow:hidden;
-  transition:transform 0.15s,box-shadow 0.15s;
-  box-shadow:0 8px 40px rgba(255,58,0,0.4);
-  margin-top:28px;
-  animation:riseIn 0.7s 0.8s ease forwards;
-  opacity:0;
-}
-.hero-buy-btn::before{
-  content:'';
-  position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,transparent 60%);
-}
-.hero-buy-btn:hover{
-  transform:translateY(-3px);
-  box-shadow:0 14px 50px rgba(255,58,0,0.55);
-}
-.hero-buy-btn:active{transform:translateY(0)}
 
 /* BUY BUTTON */
 .buy-btn{
@@ -885,61 +860,6 @@ body::before{
   margin-top:20px;
 }
 
-/* ── STICKY BOTTOM BAR ── */
-.sticky-bar{
-  position:fixed;
-  bottom:0;left:0;right:0;
-  z-index:9999;
-  background:rgba(13,11,8,0.97);
-  border-top:1px solid rgba(255,58,0,0.3);
-  backdrop-filter:blur(12px);
-  padding:12px 20px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  transform:translateY(100%);
-  transition:transform 0.4s ease;
-  box-shadow:0 -8px 40px rgba(0,0,0,0.5);
-}
-.sticky-bar.show{
-  transform:translateY(0);
-}
-.sticky-price{
-  display:flex;flex-direction:column;
-  gap:1px;flex-shrink:0;
-}
-.sticky-price-main{
-  font-family:'Bebas Neue',sans-serif;
-  font-size:28px;color:var(--cream);
-  line-height:1;
-}
-.sticky-price-old{
-  font-size:12px;color:rgba(242,235,217,0.35);
-  text-decoration:line-through;
-  font-family:'Oswald',sans-serif;
-  letter-spacing:0.05em;
-}
-.sticky-btn{
-  flex:1;
-  padding:14px 16px;
-  background:linear-gradient(135deg,var(--fire) 0%,var(--ember) 100%);
-  color:var(--cream);
-  font-family:'Bebas Neue',sans-serif;
-  font-size:18px;letter-spacing:0.08em;
-  text-align:center;text-decoration:none;
-  cursor:pointer;border:none;
-  box-shadow:0 4px 20px rgba(255,58,0,0.4);
-  transition:transform 0.15s,box-shadow 0.15s;
-  position:relative;overflow:hidden;
-}
-.sticky-btn::before{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,transparent 60%);
-}
-.sticky-btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,58,0,0.55)}
-.sticky-btn:active{transform:translateY(0)}
-
 /* ─── ANIMATIONS ─── */
 @keyframes riseIn{
   from{opacity:0;transform:translateY(18px)}
@@ -956,6 +876,57 @@ body::before{
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--ink)}
 ::-webkit-scrollbar-thumb{background:var(--fire)}
+/* ── STICKY BOTTOM CTA ── */
+.sticky-cta{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  z-index:9999;
+  background:linear-gradient(135deg,var(--ink2) 0%,#1a0f05 100%);
+  border-top:1px solid var(--fire);
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  box-shadow:0 -4px 24px rgba(255,58,0,0.2);
+  transform:translateY(100%);
+  transition:transform 0.4s ease;
+}
+.sticky-cta.visible{transform:translateY(0)}
+.sticky-left{display:flex;align-items:center;gap:8px}
+.sticky-price{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:28px;
+  color:var(--fire);
+  line-height:1;
+}
+.sticky-old{
+  font-size:14px;
+  color:var(--muted);
+  text-decoration:line-through;
+}
+.sticky-off{
+  font-size:11px;
+  font-weight:600;
+  color:var(--gold);
+  background:rgba(255,194,0,0.12);
+  padding:3px 7px;
+  border-radius:3px;
+  letter-spacing:0.05em;
+}
+.sticky-btn{
+  background:linear-gradient(135deg,var(--fire),var(--ember));
+  color:#fff;
+  font-family:'Bebas Neue',sans-serif;
+  font-size:16px;
+  letter-spacing:0.08em;
+  padding:12px 20px;
+  border-radius:4px;
+  text-decoration:none;
+  white-space:nowrap;
+  box-shadow:0 4px 16px rgba(255,58,0,0.4);
+}
+body{padding-bottom:70px}
 </style>
 </head>
 <body>
@@ -1000,8 +971,6 @@ body::before{
       Ek decision jo sab badal deta hai.
     </div>
   </div>
-
-  <a href="https://superprofile.bio/vp/%E2%9A%94%EF%B8%8F-monk-mode-os-%E2%80%94-30-day-reset" class="hero-buy-btn" target="_blank">⚔️ ABHI LO — SIRF ₹199</a>
 </section>
 
 <!-- ══ PAIN ══ -->
@@ -1393,10 +1362,7 @@ body::before{
   <div class="price-box">
     <div class="pb-row">
       <div class="pb-price"><sup>₹</sup>199</div>
-      <div class="pb-old-wrap">
-        <div class="pb-old-label">Was</div>
-        <div class="pb-old">₹499</div>
-      </div>
+      <div class="pb-old">₹499</div>
     </div>
     <div class="pb-save">⚡ 60% Off · Launch Price · Sirf Abhi</div>
     <ul class="pb-includes">
@@ -1411,7 +1377,7 @@ body::before{
     </ul>
   </div>
 
-  <a href="https://superprofile.bio/vp/%E2%9A%94%EF%B8%8F-monk-mode-os-%E2%80%94-30-day-reset" class="buy-btn" target="_blank">⚔️ LO ABHI — MONK MODE SHURU KARO</a>
+  <a href="https://superprofile.bio/vp/⚔️-monk-mode-os-—-30-day-reset" class="buy-btn">⚔️ LO ABHI — MONK MODE SHURU KARO</a>
   <p class="btn-sub">Notion account chahiye (free) · 1 click duplicate · Turant access</p>
 
   <div class="guarantee">
@@ -1434,13 +1400,14 @@ body::before{
 
 </div><!-- /wrap -->
 
-<!-- ══ STICKY BUY BAR ══ -->
-<div class="sticky-bar" id="stickyBar">
-  <div class="sticky-price">
-    <div class="sticky-price-main">₹199</div>
-    <div class="sticky-price-old">₹499</div>
+<!-- STICKY BOTTOM CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-left">
+    <span class="sticky-price">₹199</span>
+    <span class="sticky-old">₹499</span>
+    <span class="sticky-off">60% OFF</span>
   </div>
-  <a href="https://superprofile.bio/vp/%E2%9A%94%EF%B8%8F-monk-mode-os-%E2%80%94-30-day-reset" class="sticky-btn" target="_blank">⚔️ ABHI LO — MONK MODE</a>
+  <a href="https://superprofile.bio/vp/⚔️-monk-mode-os-—-30-day-reset" class="sticky-btn">⚔️ ABHI LO</a>
 </div>
 
 <script>
@@ -1456,19 +1423,17 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 reveals.forEach(el => observer.observe(el));
 
-// Sticky bar — hero ke baad dikhao
-const stickyBar = document.getElementById('stickyBar');
+// Sticky CTA — hero ke baad dikhao
+const stickyCta = document.getElementById('stickyCta');
 const hero = document.querySelector('.hero');
-const heroObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) {
-      stickyBar.classList.add('show');
-    } else {
-      stickyBar.classList.remove('show');
-    }
-  });
-}, { threshold: 0.1 });
-heroObserver.observe(hero);
+window.addEventListener('scroll', () => {
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  if (heroBottom < 0) {
+    stickyCta.classList.add('visible');
+  } else {
+    stickyCta.classList.remove('visible');
+  }
+});
 </script>
 
 </body>
